@@ -22,7 +22,7 @@ const Breadcrumb = ({
                   {pageDescription}
                 </p>
 
-                <ul className="flex items-center justify-center gap-[10px]">
+                {/* <ul className="flex items-center justify-center gap-[10px]">
                   <li>
                     <Link
                       href="/"
@@ -40,7 +40,7 @@ const Breadcrumb = ({
                       {pageName}
                     </p>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>

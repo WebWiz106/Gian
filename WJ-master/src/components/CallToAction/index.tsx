@@ -16,8 +16,7 @@ const CallToAction = () => {
                   </span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  There are many variations of passages of Lorem Ipsum but the
-                  majority have suffered in some form.
+                  Explore Our Services and Begin Your Journey Towards Digital Success Today
                 </p>
                 <Link
                   href="/"

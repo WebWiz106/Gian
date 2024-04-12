@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const ResetPasswordPage = ({ params }: { params: { token: string } }) => {
   return (
     <>
-      <Breadcrumb pageName="Reset Password" />
+      {/* <Breadcrumb pageName="Reset Password" /> */}
       <ResetPassword token={params.token} />
     </>
   );

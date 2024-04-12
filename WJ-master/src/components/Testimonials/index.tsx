@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Sabo Masties",
     designation: "Founder @ Rolex",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Efficient, professional and creative! WebJili transformed our ideas into a stunning website effortlessly.",
     image: "/images/testimonials/author-01.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Margin Gesmu",
     designation: "Founder @ UI Hunter",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Incredible team! WebJili made our website dreams a reality. Fast, responsive and top-notch quality.",
     image: "/images/testimonials/author-02.png",
     star: 5,
   },
@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "William Smith",
     designation: "Founder @ Trorex",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Exceptional service! WebJili crafted a perfect website. Efficient, creative, and highly recommended.",
     image: "/images/testimonials/author-03.png",
     star: 5,
   },
@@ -39,7 +39,7 @@ const Testimonials = () => {
         <SectionTitle
           subtitle="Testimonials"
           title="What our Client Say"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Discover the rich variety of content our clients love! From captivating passages to engaging narratives, we deliver beyond expectations."
           width="640px"
           center
         />

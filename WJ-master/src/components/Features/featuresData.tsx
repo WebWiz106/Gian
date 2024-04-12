@@ -17,8 +17,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Free and Open-Source",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "Mobile App Development",
+    paragraph: "Innovating user experiences, delivering convenience and value through dynamic mobile app solutions.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -38,8 +38,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Modern Design",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "Website Development",
+    paragraph: "Revolutionize online presence through tailored designs,functionality, and user-centric website solutions.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -91,8 +91,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "SaaS Starter Kit",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "UI / UX",
+    paragraph: "Crafting Intuitive Experiences: Expert UI Design and Development for Seamless User Interaction.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -124,8 +124,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "All Essential Integrations",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "SEO Optimization",
+    paragraph: "Enhancing visibility and driving traffic through strategic techniques for better search engine rankings and exposure.",
     btn: "Learn More",
     btnLink: "/#",
   },
