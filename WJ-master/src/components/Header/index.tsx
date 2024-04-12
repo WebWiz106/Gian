@@ -63,8 +63,8 @@ const Header = () => {
                 {pathUrl !== "/" ? (
                   <>
                     <Image
-                      // src={`/images/logo/logo.png`}
-                      src={Logo}
+                      src={`/images/logo/logo-grey.png`}
+                      // src={Logo}
                       alt="logo"
                       width={240}
                       height={30}
@@ -82,7 +82,7 @@ const Header = () => {
                   <>
                     <Image
                       src={`${sticky
-                        ? "/images/logo/logo-white.png"
+                        ? "/images/logo/logo-grey.png"
                         : "/images/logo/logo-white.png"
                         }`}
                       alt="logo"
