@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/images/logo/W_J-removebg-preview.png"
+import Logo from "../../../public/images/logo/W_J-removebg-preview.png";
 
 const Footer = () => {
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
               <div className="-mx-3 flex items-center">
                 <a
                   aria-label="social link"
-                  href="/#"
+                  href="https://www.facebook.com/profile.php?id=61558474527005"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
@@ -44,7 +44,7 @@ const Footer = () => {
                 </a>
                 <a
                   aria-label="social link"
-                  href="/#"
+                  href="https://twitter.com/Webjini_Ai"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
@@ -60,7 +60,7 @@ const Footer = () => {
                 </a>
                 <a
                   aria-label="social link"
-                  href="/#"
+                  href="https://www.instagram.com/webjini.ai"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
@@ -78,7 +78,7 @@ const Footer = () => {
                 </a>
                 <a
                   aria-label="social link"
-                  href="/#"
+                  href="https://www.instagram.com/webjini.ai"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg

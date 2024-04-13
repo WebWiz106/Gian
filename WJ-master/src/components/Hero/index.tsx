@@ -16,18 +16,21 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-                  Enhance Your Digital Presence with Interactive Software Solutions
+                  Enhance Your Digital Presence with Interactive Software
+                  Solutions
                 </h1>
                 <p className="mx-auto mb-9 max-w-[700px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  "Unlock the potential of your digital presence with our cutting-edge software solutions. Craft seamless experiences and elevate your brand today.
+                  "Unlock the potential of your digital presence with our
+                  cutting-edge software solutions. Craft seamless experiences
+                  and elevate your brand today.
                 </p>
                 <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
                     <Link
-                      href="https://nextjstemplates.com/templates/play"
+                      href="#contact"
                       className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2"
                     >
-                      Start Now
+                      Contact Us
                     </Link>
                   </li>
                 </ul>

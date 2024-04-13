@@ -1,4 +1,43 @@
+"use client";
+import axios from "axios";
+import { useState } from "react";
+import toast from "react-hot-toast";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await axios.post("/api/send-query-mail", formData);
+      console.log(formData);
+      toast.success("Mail sent successfully!");
+
+      console.log("Mail sent successfully!", response);
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending mail:", error);
+      toast.error("Failed to send mail. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   return (
     <section id="contact" className="relative py-20 md:py-[120px]">
       <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
@@ -72,7 +111,7 @@ const Contact = () => {
               <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
                 Send us a Message
               </h3>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-[22px]">
                   <label
                     htmlFor="fullName"
@@ -83,6 +122,8 @@ const Contact = () => {
                   <input
                     type="text"
                     name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     placeholder="Adam Gelius"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
@@ -97,6 +138,8 @@ const Contact = () => {
                   <input
                     type="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="example@gmail.com"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
@@ -111,6 +154,8 @@ const Contact = () => {
                   <input
                     type="text"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="+91 858 5211 552"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
@@ -125,6 +170,8 @@ const Contact = () => {
                   <textarea
                     name="message"
                     rows={1}
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="type your message here"
                     className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   ></textarea>
@@ -133,8 +180,32 @@ const Contact = () => {
                   <button
                     type="submit"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
+                    disabled={loading} // Disable button when loading
                   >
-                    Send
+                    {loading ? ( // Conditional rendering for loading icon
+                      <svg
+                        className="-ml-1 mr-3 h-5 w-5 animate-spin text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 4.418 3.582 8 8 8v-4zm10-9.418A7.962 7.962 0 0120 12h4c0-6.627-5.373-12-12-12v4z"
+                        ></path>
+                      </svg>
+                    ) : (
+                      "Send"
+                    )}
                   </button>
                 </div>
               </form>

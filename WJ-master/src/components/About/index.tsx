@@ -1,9 +1,8 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const About = () => {
-
   const pathUrl = usePathname();
   return (
     <section
@@ -19,19 +18,29 @@ const About = () => {
                   About WebJini : Digital Innovation Since 2023
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  Welcome to WebJini, where innovation meets excellence. Established in 2023, we are a dynamic software solutions provider committed to transforming your digital landscape.
+                  Welcome to WebJini, where innovation meets excellence.
+                  Established in 2023, we are a dynamic software solutions
+                  provider committed to transforming your digital landscape.
                   <br /> <br />
-                  At WebJini, we pride ourselves on our versatility across multiple IT domains. Whether you're looking to develop mobile applications that resonate with your audience, craft captivating websites that drive engagement, or design intuitive UI/UX experiences that leave a lasting impression, we have the expertise to bring your vision to life.
+                  At WebJini, we pride ourselves on our versatility across
+                  multiple IT domains. Whether you're looking to develop mobile
+                  applications that resonate with your audience, craft
+                  captivating websites that drive engagement, or design
+                  intuitive UI/UX experiences that leave a lasting impression,
+                  we have the expertise to bring your vision to life.
                   {/* <br /> <br /> */}
+                </p>
 
-                </p>ss
-
-                {pathUrl !== "/about" ? <a
-                  href="/about"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
-                >
-                  Know More
-                </a> : ""}
+                {pathUrl !== "/about" ? (
+                  <a
+                    href="/about"
+                    className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
+                  >
+                    Know More
+                  </a>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
 
