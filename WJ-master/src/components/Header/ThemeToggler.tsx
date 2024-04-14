@@ -1,12 +1,27 @@
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
+
+  const setThemeBasedOnTime = () => {
+    const hour = new Date().getHours();
+    if (hour >= 19 || hour < 8) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  useEffect(() => {
+    setThemeBasedOnTime();
+  }, []);
+
   return (
     <button
       aria-label="theme toggler"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="text-body-color flex h-8 w-8 items-center justify-center duration-300 dark:text-white"
+      className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
     >
       <span>
         <svg

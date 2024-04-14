@@ -30,6 +30,7 @@ const Footer = () => {
                   aria-label="social link"
                   href="https://www.facebook.com/profile.php?id=61558474527005"
                   className="px-3 text-gray-7 hover:text-white"
+                  target="_blank"
                 >
                   <svg
                     width="22"
@@ -46,6 +47,7 @@ const Footer = () => {
                   aria-label="social link"
                   href="https://twitter.com/Webjini_Ai"
                   className="px-3 text-gray-7 hover:text-white"
+                  target="_blank"
                 >
                   <svg
                     width="22"
@@ -62,6 +64,7 @@ const Footer = () => {
                   aria-label="social link"
                   href="https://www.instagram.com/webjini.ai"
                   className="px-3 text-gray-7 hover:text-white"
+                  target="_blank"
                 >
                   <svg
                     width="22"
@@ -78,8 +81,9 @@ const Footer = () => {
                 </a>
                 <a
                   aria-label="social link"
-                  href="https://www.instagram.com/webjini.ai"
+                  href="https://www.linkedin.com/company/appiqai"
                   className="px-3 text-gray-7 hover:text-white"
+                  target="_blank"
                 >
                   <svg
                     width="22"
@@ -293,14 +297,14 @@ const Footer = () => {
               <div className="my-1 flex justify-center md:justify-end">
                 <p className="text-base text-gray-7">
                   Designed & Developed by{" "}
-                  <a
-                    href="https://tailgrids.com"
+                  <Link
+                    href="/"
                     rel="nofollow noopner noreferrer"
                     target="_blank"
                     className="text-gray-1 hover:underline"
                   >
                     WebJini
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
