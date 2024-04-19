@@ -78,7 +78,7 @@ const Footer = () => {
                 </a>
                 <a
                   aria-label="social link"
-                  href="https://www.instagram.com/webjini.ai"
+                  href="https://www.linkedin.com/company/appiqai/about/?viewAsMember=true"
                   className="px-3 text-gray-7 hover:text-white"
                 >
                   <svg
