@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import careerImage from "../../../public/images/about/abou.jpg"
+import careerImage from "../../../public/images/about/now-hiring-new-business-launch-plan-concept.jpg"
 import Link from "next/link";
 
 const Career = () => {
@@ -63,11 +63,11 @@ const Career = () => {
   };
 
   return (
-    <div className="bg-gray-100 pb-8 pt-20 lg:pb-[70px] lg:pt-[120px]">
+    <div className=" pb-8 pt-20 lg:pb-[70px] lg:pt-[120px]">
       <div className=" max-w-[1280px] mx-auto max-md:px-[16px]">
         <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-5">
           <div className="flex flex-col  max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow px-5 max-md:px-0 mt-3 text-lg text-neutral-950 max-md:mt-10 max-md:max-w-full">
+            <div className="flex flex-col grow px-5 max-md:px-0 mt-3 text-lgmax-md:mt-10 max-md:max-w-full">
               <div className="text-6xl tracking-wider max-md:max-w-full max-md:text-4xl">
                 Join the team{" "}
               </div>
