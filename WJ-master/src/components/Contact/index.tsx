@@ -11,16 +11,26 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+  if (emailSent) {
+    setTimeout(() => {
+      setEmailSent(false);
+    }, 2000);
+  }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("/api/send-query-mail", formData);
+      const response = await axios.post(
+        "http://localhost:8000/api/clientformdata",
+        { ...formData, name: formData.fullName },
+      );
       console.log(formData);
       toast.success("Mail sent successfully!");
 
       console.log("Mail sent successfully!", response);
+      setEmailSent(true);
       setFormData({
         fullName: "",
         email: "",
@@ -41,8 +51,31 @@ const Contact = () => {
   return (
     <section id="contact" className="relative py-20 md:py-[120px]">
       <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
+
       <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
       <div className="container px-4">
+        {/* <div
+          className="mb-10 rounded-md border-2 border-teal-500 bg-teal-100 px-4 py-3 text-teal-900 shadow-sm"
+          role="alert"
+        >
+          <div className="flex">
+            <div className="py-1">
+              <svg
+                className="mr-4 h-6 w-6 fill-current text-teal-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+              </svg>
+            </div>
+            <div className="flex items-center  ">
+              <p className="font-semibold">Query Sent Succesfully</p>
+              <p className="text-sm">
+                Make sure you know how these changes affect you.
+              </p>
+            </div>
+          </div>
+        </div> */}
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div className="ud-contact-content-wrapper">
@@ -179,7 +212,7 @@ const Contact = () => {
                 <div className="mb-0">
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
+                    className={`inline-flex items-center justify-center rounded-md px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-blue-900 ${emailSent ? "bg-green-500" : "bg-blue-700"}`}
                     disabled={loading} // Disable button when loading
                   >
                     {loading ? ( // Conditional rendering for loading icon

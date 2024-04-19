@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { FaArrowUp, FaPhone, FaWhatsapp } from "react-icons/fa";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Top: 0 takes us all the way back to the top of the page
-  // Behavior: smooth keeps it smooth!
+  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -12,14 +12,10 @@ export default function ScrollToTop() {
     });
   };
 
+  // Toggle visibility based on scroll position
   useEffect(() => {
-    // Button is displayed after scrolling for 500 pixels
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -29,15 +25,29 @@ export default function ScrollToTop() {
 
   return (
     <div className="fixed bottom-8 right-8 z-[999]">
-      {isVisible && (
+      {/* Scroll to top button */}
+      {/* {isVisible && (
         <div
           onClick={scrollToTop}
-          aria-label="scroll to top"
+          aria-label="Scroll to top"
           className="back-to-top flex h-10 w-10 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"
         >
-          <span className="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"></span>
+          <FaArrowUp />
         </div>
-      )}
+      )} */}
+      {/* Call icon */}
+      <div className="mt-2  flex flex-col items-center justify-center space-y-2">
+        <a href="tel:+1234567890">
+          <div className="icon-circle mr-2 rounded-full bg-primary p-2 text-white">
+            <FaPhone />
+          </div>
+        </a>
+        <a href="https://wa.me/+917983127644">
+          <div className="icon-circle mr-2 rounded-full bg-primary p-2 text-white">
+            <FaWhatsapp />
+          </div>
+        </a>
+      </div>
     </div>
   );
 }
