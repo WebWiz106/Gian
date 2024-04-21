@@ -49,9 +49,9 @@ export default function RootLayout({
               <MantineProvider>
                 {/* <ToasterContext /> */}
                 <Provider store={store}>
-                  <Header />
+                  {/* <Header /> */}
                   {children}
-                  <Footer />
+                  {/* <Footer /> */}
                   <ScrollToTop />
                 </Provider>
               </MantineProvider>

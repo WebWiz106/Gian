@@ -33,12 +33,6 @@ const menuData: Menu[] = [
     path: "/contact",
     newTab: false,
   },
-  {
-    id: 6,
-    title: "Dashboard",
-    path: "/dash",
-    newTab: false,
-  },
 ];
 // function getDashboardPath() {
 //   const AuthState = useAppSelector((state) => state.auth); // Use useSelector inside the function

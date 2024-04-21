@@ -10,7 +10,7 @@ interface AuthState {
 const initialState: AuthState = {
   isAuth: true,
   isAdmin: false,
-  isClient: false,
+  isClient: true,
 };
 
 export const AuthSlice = createSlice({
