@@ -1,7 +1,21 @@
+"use client";
+import { useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFaq from "./SingleFaq";
-
+import axios from "axios";
 const Faq = () => {
+  useEffect(() => {
+    getFaq();
+  }, []);
+
+  const getFaq = async () => {
+    try {
+      const data = await axios.get("http://localhost:8000/api/faqs");
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-10">
       <div className="container">
