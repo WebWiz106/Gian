@@ -10,6 +10,10 @@ import "../styles/prism-vsc-dark-plus.css";
 // import ToasterContext from "./api/contex/ToasetContex";
 import { useEffect, useState } from "react";
 import PreLoader from "@/components/Common/PreLoader";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import "@mantine/core/styles.css";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 export default function RootLayout({
   children,
@@ -28,7 +32,9 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
+      <head>
+        <ColorSchemeScript />
+      </head>
 
       <body>
         {loading ? (
@@ -40,11 +46,15 @@ export default function RootLayout({
               enableSystem={false}
               defaultTheme="light"
             >
-              {/* <ToasterContext /> */}
-              <Header />
-              {children}
-              <Footer />
-              <ScrollToTop />
+              <MantineProvider>
+                {/* <ToasterContext /> */}
+                <Provider store={store}>
+                  <Header />
+                  {children}
+                  <Footer />
+                  <ScrollToTop />
+                </Provider>
+              </MantineProvider>
             </ThemeProvider>
           </SessionProvider>
         )}

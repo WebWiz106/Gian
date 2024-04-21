@@ -1,4 +1,6 @@
+"use client";
 import { Menu } from "@/types/menu";
+import { useAppSelector, useAppDispatch } from "../../app/redux/hook/hook";
 
 const menuData: Menu[] = [
   {
@@ -31,55 +33,22 @@ const menuData: Menu[] = [
     path: "/contact",
     newTab: false,
   },
-
-  // {
-  //   id: 6,
-  //   title: "Pages",
-  //   newTab: false,
-  //   submenu: [
-  //     {
-  //       id: 61,
-  //       title: "About Page",
-  //       path: "/about",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 62,
-  //       title: "Pricing Page",
-  //       path: "/pricing",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 63,
-  //       title: "Contact Page",
-  //       path: "/contact",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 64,
-  //       title: "Blog Grid Page",
-  //       path: "/blogs",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 66,
-  //       title: "Sign Up Page",
-  //       path: "/signup",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 67,
-  //       title: "Sign In Page",
-  //       path: "/signin",
-  //       newTab: false,
-  //     },
-  //     {
-  //       id: 68,
-  //       title: "Error Page",
-  //       path: "/error",
-  //       newTab: false,
-  //     },
-  //   ],
-  // },
+  {
+    id: 6,
+    title: "Dashboard",
+    path: "/dash",
+    newTab: false,
+  },
 ];
+// function getDashboardPath() {
+//   const AuthState = useAppSelector((state) => state.auth); // Use useSelector inside the function
+
+//   if (AuthState && AuthState.isClient) {
+//     return "/clientdashboard";
+//   } else if (AuthState && AuthState.isAdmin) {
+//     return "/admindashboard";
+//   } else {
+//     return "";
+//   }
+// }
 export default menuData;
