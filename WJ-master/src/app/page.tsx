@@ -6,6 +6,8 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Team from "@/components/Team";
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <Header />
       <ScrollUp />
       <Hero />
       <Features />
@@ -33,6 +36,7 @@ export default function Home() {
       {/* <HomeBlogSection posts={posts} /> */}
       <Contact />
       {/* <Clients /> */}
+      <Footer />
     </main>
   );
 }

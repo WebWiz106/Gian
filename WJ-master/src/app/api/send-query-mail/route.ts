@@ -41,7 +41,6 @@ export async function POST(request: Request) {
           <p style="color: #333;">Thank you for reaching out to us. We have received your query.</p>
           <p style="color: #333;">Here are the details you provided:</p>
           <ul>
-            <li>Full Name: ${fullName}</li>
             <li>Email: ${email}</li>
             <li>Phone: ${phone}</li>
             <li>Message: ${message}</li>
