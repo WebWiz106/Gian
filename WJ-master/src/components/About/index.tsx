@@ -6,6 +6,7 @@ import { useAppSelector, useAppDispatch } from "../../app/redux/hook/hook";
 const About = () => {
   const pathUrl = usePathname();
   const count = useAppSelector((state) => state.auth.isAuth);
+
   return (
     <section
       id="about"

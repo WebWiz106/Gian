@@ -266,7 +266,7 @@ const Header = () => {
                           href={
                             AuthState.isAdmin
                               ? "/admindashboard"
-                              : "clientdashboard"
+                              : "/client/dashboard"
                           }
                           className={`ud-menu-scroll ${!sticky ? "text-white" : "text-dark"} flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6`}
                         >

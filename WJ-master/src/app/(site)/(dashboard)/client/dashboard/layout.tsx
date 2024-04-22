@@ -1,15 +1,19 @@
-import ClientNavbar from "@/components/Dashboard/Client/Navbar";
-import ClientSidebar from "@/components/Dashboard/Client/Sidebar";
-import Link from "next/link";
+"use client";
+
+import { setProfileToggler } from "@/app/redux/feature/toggler/togglerSlice";
+import { useAppDispatch, useAppSelector } from "@/app/redux/hook/hook";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const tg = useAppSelector((state) => state.toggler.profileToggler);
+  console.log(tg, "profile");
+  const dispatch = useAppDispatch();
   return (
     <html lang="en">
-      <body>
+      <body className=" ">
         <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
           <div className="px-3 py-3 lg:px-5 lg:pl-3">
             <div className="flex items-center justify-between">
@@ -275,7 +279,9 @@ export default function RootLayout({
         </aside>
 
         <div className="p-4 sm:ml-64">
-          <div className="mt-14 rounded-lg  p-4 ">{children}</div>
+          <div className="mt-14 rounded-lg  p-4 dark:border-gray-700">
+            {children}
+          </div>
         </div>
       </body>
     </html>
