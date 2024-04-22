@@ -1,6 +1,14 @@
+"use client";
+import { setProfileToggler } from "@/app/redux/feature/toggler/togglerSlice";
+import { useAppDispatch, useAppSelector } from "@/app/redux/hook/hook";
 import React from "react";
 
 const ClientNavbar = () => {
+  const profileToggler = useAppSelector(
+    (state) => state.toggler.profileToggler,
+  );
+  const dispatch = useAppDispatch();
+  console.log(profileToggler);
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
@@ -47,6 +55,7 @@ const ClientNavbar = () => {
                   className="flex rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                   aria-expanded="false"
                   data-dropdown-toggle="dropdown-user"
+                  onClick={() => dispatch(setProfileToggler())}
                 >
                   <span className="sr-only">Open user menu</span>
                   <img
