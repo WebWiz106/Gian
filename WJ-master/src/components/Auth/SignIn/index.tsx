@@ -123,7 +123,8 @@ const Signin = () => {
                   </div>
                 </form>
               ) : (
-                <MagicLink />
+                ""
+                // <MagicLink />
               )}
 
               <Link
