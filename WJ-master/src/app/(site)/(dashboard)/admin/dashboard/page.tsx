@@ -1,85 +1,53 @@
 import React from "react";
+import { IoPerson } from "react-icons/io5";
 
 const page = () => {
 
   return (
     <div className="h-full ">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3  ">
-        <a
-          href="#"
-          className="block  rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-        </a>
-        <a
-          href="#"
-          className="col-span-2 block  rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-          <p className=" font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-        </a>
+      <div className="w-full flex justify-end shadow-lg shadow-black h-9 mb-3 p-6 items-center">
+        <span><IoPerson style={{ height: "35px", width: "35px" }} /></span>
       </div>
-      <h1 className="py-2 text-2xl">WebJini App</h1>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-        <a
-          href="#"
-          className="block  rounded-lg  bg-gray-3 p-6  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            App 1
-          </h5>
-        </a>
-        <a
-          href="#"
-          className="block  rounded-lg  bg-gray-3 p-6  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            App 1
-          </h5>
-        </a>
-        <a
-          href="#"
-          className="block  rounded-lg  bg-gray-3 p-6  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            App 1
-          </h5>
-        </a>
-        <a
-          href="#"
-          className="block  rounded-lg  bg-gray-3 p-6  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            App 1
-          </h5>
-        </a>
-        <a
-          href="#"
-          className="block  rounded-lg  bg-gray-3 p-6  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            App 1
-          </h5>
-        </a>
-        <a
-          href="#"
-          className="block  rounded-lg  bg-gray-3 p-6  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            App 1
-          </h5>
-        </a>
+      <div className="flex gird grid-cols-2 gap-4">
+        <div className="w-3/4 h-20 p-3 gap-4">
+          <div className="grid grid-cols-2 p-3 gap-4">
+            <div className="w-full h-20 rounded-md" style={{ backgroundColor: "#FF8E2E" }}></div>
+            <div className="w-full h-20 rounded-md" style={{ backgroundColor: "#FF8E2E" }}></div>
+            <div className="w-full h-20 rounded-md" style={{ backgroundColor: "#FF8E2E" }}></div>
+            <div className="w-full h-20 rounded-md" style={{ backgroundColor: "#FF8E2E" }}></div>
+          </div>
+          <div>
+            <div className="w-full flex justify-center gap-4">
+              <span className="font-medium text-orange-400 flex justify-center hover:bg-black hover:text-white rounded-lg p-2 w-24">Week</span>
+              <span className="font-medium text-orange-400 flex justify-center hover:bg-black hover:text-white rounded-lg p-2 w-24">Month</span>
+              <span className="font-medium text-orange-400 flex justify-center hover:bg-black hover:text-white rounded-lg p-2 w-24">Year</span>
+            </div>
+          </div>
+          <div className="w-full mt-3">
+            <p className="w-full flex justify-center bg-black text-white p-2">Apps</p>
+            <div className="w-full flex">
+              <div className="w-1/3 flex justify-center border-r-2 border-black h-10 items-center" style={{backgroundColor:"#D9D9D9"}}>
+                <p>Blogs App</p>
+              </div>
+              <div className="w-1/3 flex justify-center border-r-2 border-black items-center" style={{backgroundColor:"#D9D9D9"}}>
+                <p>Launched on <span style={{color:"#FF8E2E"}}>01-12-2023</span></p>
+              </div>
+              <div className="w-1/3 flex justify-center items-center" style={{backgroundColor:"#D9D9D9"}}>
+                <p><span style={{color:"#FF8E2E"}}>23</span> Clients using this app</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-1/4 flex flex-col item-center p-2 gap-4">
+          <div className="flex flex-col justify-center border border-black border-solid">
+            <p className="bg-black text-white w-full flex justify-center p-2">Clients</p>
+            <span className="h-48" style={{ backgroundColor: "#D9D9D9" }}></span>
+          </div>
+          <div className="flex flex-col justify-center border border-black border-solid">
+            <p className="bg-black text-white w-full flex justify-center p-2">Members</p>
+            <span className="h-48" style={{ backgroundColor: "#D9D9D9" }}></span>
+          </div>
+        </div>
       </div>
     </div>
   );
