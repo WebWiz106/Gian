@@ -12,8 +12,6 @@ import { useEffect, useState } from "react";
 import PreLoader from "@/components/Common/PreLoader";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import "@mantine/core/styles.css";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 export default function RootLayout({
   children,
@@ -32,9 +30,7 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head>
-        <ColorSchemeScript />
-      </head>
+      <head></head>
 
       <body>
         {loading ? (
@@ -46,15 +42,13 @@ export default function RootLayout({
               enableSystem={false}
               defaultTheme="light"
             >
-              <MantineProvider>
-                {/* <ToasterContext /> */}
-                <Provider store={store}>
-                  {/* <Header /> */}
-                  {children}
-                  {/* <Footer /> */}
-                  <ScrollToTop />
-                </Provider>
-              </MantineProvider>
+              {/* <ToasterContext /> */}
+              <Provider store={store}>
+                {/* <Header /> */}
+                {children}
+                {/* <Footer /> */}
+                {/* <ScrollToTop /> */}
+              </Provider>
             </ThemeProvider>
           </SessionProvider>
         )}

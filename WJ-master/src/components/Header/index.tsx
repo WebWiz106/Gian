@@ -66,14 +66,14 @@ const Header = () => {
                 {pathUrl !== "/" ? (
                   <>
                     <Image
-                      src={`/images/logo/logo.svg`}
+                      src={`../../../public/images/logo/webjili_logo.png`}
                       alt="logo"
                       width={240}
                       height={30}
                       className="header-logo w-full dark:hidden"
                     />
                     <Image
-                      src={`/images/logo/logo-white.svg`}
+                      src={`../../../public/images/logo/webjili_logo.png`}
                       alt="logo"
                       width={240}
                       height={30}
@@ -258,7 +258,7 @@ const Header = () => {
                       ),
                     )}
                     {/* dashboard */}
-                    {AuthState.isAuth ? (
+                    {/* {AuthState.isAuth ? (
                       <li>
                         <Link
                           onClick={navbarToggleHandler}
@@ -275,7 +275,7 @@ const Header = () => {
                       </li>
                     ) : (
                       ""
-                    )}
+                    )} */}
                   </ul>
                 </nav>
               </div>

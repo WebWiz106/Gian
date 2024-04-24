@@ -4,19 +4,7 @@ import { useEffect } from "react";
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
 
-  const setThemeBasedOnTime = () => {
-    const hour = new Date().getHours();
-    if (hour >= 19 || hour < 8) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
-
-  useEffect(() => {
-    setThemeBasedOnTime();
-  }, []);
-
+  console.log(theme, "harsh");
   return (
     <button
       aria-label="theme toggler"
